@@ -69,7 +69,7 @@ public class MakerController {
     }
 
     @PutMapping("/update/{id}")
-    public ResponseEntity<?> updateMaker(@PathVariable Long id, @RequestBody MakerDTO makerDTO) throws URISyntaxException {
+    public ResponseEntity<?> updateMaker(@PathVariable Long id, @RequestBody MakerDTO makerDTO){
 
         Optional<Maker> makerOptional = makerService.findById(id);
         if (makerOptional.isPresent()){
